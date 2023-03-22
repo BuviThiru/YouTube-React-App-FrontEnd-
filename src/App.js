@@ -3,10 +3,13 @@ import './App.css';
 import Body from './components/Body';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
+import store from './utils/store';
+import {Provider}  from 'react-redux';
 
 function App() {
   return (
-  <main>
+    <Provider store ={store}>
+      <main>
     <div>
     <Header/>
     </div>
@@ -15,6 +18,9 @@ function App() {
     <Body/>
     </div>
   </main>
+
+    </Provider>
+  
    
   );
 }
